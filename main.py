@@ -44,9 +44,9 @@ def teachable_machine_classification(img, weights_file):
 
 
     
-  def mm():
-    st.title("ကျေးဇူးပြု၍ မြန်မာဘာသာစကားအတွက် ဤနေရာကိုနိုပ်ပါ။")
-    st.subheader("https://share.streamlit.io/zinwaiyan274/zac/main/burmese.py")
+  #def mm():
+  #  st.title("ကျေးဇူးပြု၍ မြန်မာဘာသာစကားအတွက် ဤနေရာကိုနိုပ်ပါ။")
+  #  st.subheader("https://share.streamlit.io/zinwaiyan274/zac/main/burmese.py")
 
 
 def main():
