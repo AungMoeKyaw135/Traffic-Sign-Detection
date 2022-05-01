@@ -85,7 +85,7 @@ def main():
     if selected == "လုပ်ဆောင်ချက်":
         selected0 = option_menu(None, ["လုပ်ဆောင်ချက်", "ကင်မရာ", "ရလဒ်"], orientation="horizontal")
         if selected0 == "လုပ်ဆောင်ချက်":
-               demo()
+            demo()
 
 
 
