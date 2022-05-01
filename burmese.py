@@ -1,17 +1,59 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+import tensorflow as tf
+import cv2
+import pandas as pd
+from PIL import Image, ImageOps
+import numpy as np
+import matplotlib.pyplot as plt
+import PIL
+
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+
+from tensorflow.keras.models import load_model
+@st.cache(allow_output_mutation=True)
+
+def teachable_machine_classification(img, weights_file):
+    # Load the model
+    model = keras.models.load_model(weights_file)
+
+    # Create the array of the right shape to feed into the keras model
+    data = np.ndarray(shape=(1, 150, 150, 3), dtype=np.float32)
+    image = img
+    # image sizing
+    size = (150, 150)
+    image = ImageOps.fit(image, size, Image.ANTIALIAS)
+
+    # turn the image into a numpy array
+    image_array = np.asarray(image)
+    # Normalize the image
+    normalized_image_array = (image_array.astype(np.float32) / 255)
+
+    # Load the image into the array
+    data[0] = normalized_image_array
+
+    # run the inference
+    prediction_percentage = model.predict(data)
+    prediction = prediction_percentage.round()
+
+    return prediction, prediction_percentage
+
 def demo():
     st.markdown("ကြိုဆိုပါတယ်")
     uploaded_file = st.file_uploader("ပုံရွေးရန်")
 
     if uploaded_file is not None:
-        bytes_data = uploaded_file.getvalue()
+        image = Image.open(uploaded_file)
+        st.image(image, caption='Uploaded file', use_column_width=True)
+        st.write("")
         st.write('ခန့်မှန်းမည့်ပုံမှာ အောက်ပါပုံဖြစ်သည်')
-        st.image(uploaded_file)
-        if st.button('ခန့်မှန်းမယ်'):
-            dataframe = pd.read_csv(uploaded_file)
-            st.write(dataframe)
+        label, perc = teachable_machine_classification(image, 'Final.h5')
+        # st.write(label)
+        df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
+        st.write(df)
 
 
 def eng():
