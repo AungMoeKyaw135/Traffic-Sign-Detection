@@ -53,7 +53,7 @@ st.title("Traffic sign detection")
 st.subheader("from the mind of Team ZAC.")
     
 with st.sidebar:
-    selected = option_menu("Main Menu", ["Demo", 'Info'],
+    if selected = option_menu("Main Menu", ["Demo", 'Info'],
                                icons=['house', 'info-circle'], menu_icon="cast", default_index=1)
 
     st.subheader("Language")
