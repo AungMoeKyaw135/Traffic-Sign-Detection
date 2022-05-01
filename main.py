@@ -47,22 +47,15 @@ def demo():
     uploaded_file = st.file_uploader("Choose a file")
 
     if uploaded_file is not None:
-        # bytes_data = uploaded_file.getvalue()
-        # st.write('Model Input')
-        # st.image(uploaded_file)
-        # if st.button('Predict'):
-        #     dataframe = pd.read_csv(uploaded_file)
-        #     st.write(dataframe)
-        #     uploaded_file = st.file_uploader("Choose a Image...")
-
-                image = Image.open(uploaded_file)
-                st.image(image, caption='Uploaded file', use_column_width=True)
-                st.write("")
-                st.write("Classifying...")
-#                 label, perc = teachable_machine_classification(image, 'Final.h5')
-                # st.write(label)
-                df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
-                st.write(df)
+        a
+        image = Image.open(uploaded_file)
+        st.image(image, caption='Uploaded file', use_column_width=True)
+        st.write("")
+        st.write("Classifying...")
+        label, perc = teachable_machine_classification(image, 'Final.h5')
+        # st.write(label)
+        df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
+        st.write(df)
 
 
 def mm():
@@ -96,8 +89,8 @@ def main():
         selected0 = option_menu(None, ["Demonstration", "Computer Vision", " Evaluation Metric", ],
                             icons=['activity', 'eye-fill', "check2-circle"],
                             menu_icon="cast", default_index=0, orientation="horizontal")
-        if selected0 == "Demonstration":
-            demo()
+    if selected0 == "Demonstration":
+        demo()
 
 
 
