@@ -47,7 +47,6 @@ def demo():
     uploaded_file = st.file_uploader("Choose a file")
 
     if uploaded_file is not None:
-        a
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded file', use_column_width=True)
         st.write("")
@@ -90,6 +89,7 @@ def main():
                             icons=['activity', 'eye-fill', "check2-circle"],
                             menu_icon="cast", default_index=0, orientation="horizontal")
     if selected0 == "Demonstration":
+        
         demo()
 
 
