@@ -14,10 +14,6 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
-st.title('Traffic Sign Detection')
-st.markdown('''
-Try Anything
-''')
 
 @st.cache(allow_output_mutation=True)
 
@@ -47,29 +43,58 @@ def teachable_machine_classification(img, weights_file):
     return  prediction,prediction_percentage
 
 
-uploaded_file = st.file_uploader("Choose a Image...")
-
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded file', use_column_width=True)
-    st.write("")
-    st.write("Classifying...")
-    label,perc = teachable_machine_classification(image, 'Final.h5')
-    #st.write(label)
-    df = pd. DataFrame(label, columns=['Giveway', 'NoEntry','NoHorn','Roundabout','Stop']) 
-    st.write(df)
     
-   
+  def mm():
+    st.title("ကျေးဇူးပြု၍ မြန်မာဘာသာစကားအတွက် ဤနေရာကိုနိုပ်ပါ။")
+    st.subheader("https://share.streamlit.io/zinwaiyan274/zac/main/burmese.py")
 
-#if label == 0:
-#    st.write("Giveway",perc)
-#if label == 1:
-#    st.write("NoEntry",perc)   
-#if label == 2:
-#    st.write("NoHorn",perc)   
-#if label == 3:
-#    st.write("Roundabout",perc)  
-#if label == 4:
-#    st.write("Stop",perc)
-#else:
-#    st.write("Have a great day")
+
+def main():
+    st.title("Traffic sign detection")
+    st.subheader("from the mind of Team ZAC.")
+
+    with st.sidebar:
+        selected = option_menu("Main Menu", ["Demo", 'Info'],
+                               icons=['house', 'info-circle'], menu_icon="cast", default_index=1)
+
+        st.subheader("Language")
+        # selected0 = option_menu(None, ["Language"],
+        #                         icons=["translate"], orientation="horizontal")
+
+        icons=["translate"]
+        if selected == "Demo" or "Info":
+            selected0 = option_menu(None, ["English", "မြန်မာ"],
+                                    icons=['spellcheck', "translate"], orientation="horizontal")
+
+            st.text("©2022_Team_ZAC")
+    if selected0 == "မြန်မာ":
+        mm()
+
+
+    if selected == "Info":
+        selected1 = option_menu(None, ["Term and con", "Developer contact",  ],
+                            icons=['clipboard', 'chat-right-dots', "flag fill"],
+                            menu_icon="cast", default_index=0, orientation="horizontal")
+
+    if selected == "Demo":
+       selected2 = option_menu(None, ["Demonstration", "Computer Vision", " Evaluation Metric", ],
+                            icons=['activity', 'eye-fill', "check2-circle"],
+                            menu_icon="cast", default_index=0, orientation="horizontal")
+     if selected2 == "Demonstration":
+            uploaded_file = st.file_uploader("Choose a Image...")
+
+            if uploaded_file is not None:
+                image = Image.open(uploaded_file)
+                st.image(image, caption='Uploaded file', use_column_width=True)
+                st.write("")
+                st.write("Classifying...")
+                label, perc = teachable_machine_classification(image, 'Final.h5')
+                # st.write(label)
+                df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
+                st.subheader(df)
+
+
+
+
+main() 
+
