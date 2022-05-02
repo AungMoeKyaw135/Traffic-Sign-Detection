@@ -42,9 +42,9 @@ def teachable_machine_classification(img, weights_file):
     return prediction, prediction_percentage
 
 def demo():
+    
     st.markdown("ကြိုဆိုပါတယ်")
     uploaded_file = st.file_uploader("ပုံရွေးရန်")
-
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded file', use_column_width=True)
@@ -77,7 +77,7 @@ def main():
 
             st.text("©2022_Team_ZAC")
     if selected0 == "အင်္ဂလိပ်":
-            eng()
+        eng()
     if selected == "အကြောင်းအရာ":
         selected1 = option_menu(None, ["စာချုပ်", "တီထွင်သူများသို့ ဆက်သွယ်ခြင်း"], icons=['clipboard', 'chat-right-dots'],
                             menu_icon="cast", default_index=0,orientation="horizontal")
