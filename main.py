@@ -59,7 +59,7 @@ def demo():
 
 def mm():
     st.title("ကျေးဇူးပြု၍ မြန်မာဘာသာစကားအတွက် ဤနေရာကိုနိုပ်ပါ။")
-    st.subheader("https://share.streamlit.io/aungmoekyaw135/traffic-sign-detection/main/burmese.py")
+    st.subheader("https://share.streamlit.io/aungmoekyaw135/traffic-sign-detection/blob/main/burmese.py")
 
 
 def main():
