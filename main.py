@@ -56,7 +56,7 @@ def demo():
         class_names = ['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop']
         Ans = teachable_machine_classification(image, 'Final.h5')
         string=class_names[np.argmax(Ans)]
-        st.write(string)
+        st.write('Predicted Sign is: ',string)
         #df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
         #st.write(df)
 
