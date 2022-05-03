@@ -38,10 +38,9 @@ def teachable_machine_classification(img, weights_file):
 
     # run the inference
     prediction = model.predict(data)
-    string=class_names[np.argmax(prediction)]
     #prediction_percentage = model.predict(data)
     #prediction = prediction_percentage.round()
-    return string
+    return prediction
 
     #return prediction, prediction_percentage
 
@@ -54,9 +53,10 @@ def demo():
         st.image(image, caption='Uploaded file', use_column_width=True)
         st.write("")
         st.write("Classifying...")
+        class_names = ['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop']
         Ans = teachable_machine_classification(image, 'Final.h5')
-        
-        st.write(Ans)
+        string=class_names[np.argmax(Ans)]
+        st.write(string)
         #df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
         #st.write(df)
 
