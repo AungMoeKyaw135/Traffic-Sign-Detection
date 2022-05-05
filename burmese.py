@@ -50,11 +50,11 @@ def demo():
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded file', use_column_width=True)
         st.write("")
-        st.write("ခန့်မှန်းမည့်ပုံမှာ အောက်ပါပုံဖြစ်သည်")
-        class_names = ['Giveway', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'Roundabout', 'ရပ်']
+        st.subheader("ခန့်မှန်းချက်")
+        class_names = ['ဦးစာပေးစေ၍ ဖြည်းဖြည်းမောင်းပါ', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'လှည့်သွားပါ', 'ရပ်']
         Ans = teachable_machine_classification(image, 'Final.h5')
         string = class_names[np.argmax(Ans)]
-        st.write('ခန့်မှန်းမည့်ပုံမှာ - ', string)
+        st.write('ပုံ၏ အဓိပ္ပာယ်မှာ - ', string)
         # df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
         # st.write(df)
 
