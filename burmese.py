@@ -88,7 +88,11 @@ def main():
                             menu_icon="cast", default_index=0,orientation="horizontal")
 
     if selected == "လုပ်ဆောင်ချက်":
-        selected0 = option_menu(None, ["လုပ်ဆောင်ချက်", "ရလဒ်"], orientation="horizontal")
+    
+        selected0 = option_menu(None, ["လုပ်ဆောင်ချက်", "ရလဒ်" ],
+                            icons=['activity', "check2-circle"],
+                            menu_icon="cast", default_index=0, orientation="horizontal")
+    
         if selected0 == "လုပ်ဆောင်ချက်":
             demo()
         
