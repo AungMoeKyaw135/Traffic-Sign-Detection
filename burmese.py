@@ -92,7 +92,7 @@ def main():
         if selected0 == "လုပ်ဆောင်ချက်":
             demo()
         
-        if seleted0 == "ရလဒ်":
+        if selected0 == "ရလဒ်":
             st.image("img.jpeg")
 
 
