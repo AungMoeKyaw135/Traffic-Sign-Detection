@@ -43,14 +43,14 @@ def teachable_machine_classification(img, weights_file):
 
 
 def demo():
-    st.markdown("ကြိုဆိုပါတယ်y")
+    st.markdown("ကြိုဆိုပါတယ်")
     uploaded_file = st.file_uploader("ပုံရွေးရန်")
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded file', use_column_width=True)
         st.write("ခန့်မှန်းချက်")
-        st.sub(""/n/n)
+        st.sub("")
         class_names = ['ဦးစာပေးစေ၍ ဖြည်းဖြည်းမောင်းပါ', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'လှည့်သွားပါ', 'ရပ်']
         Ans = teachable_machine_classification(image, 'Final.h5')
         string = class_names[np.argmax(Ans)]
