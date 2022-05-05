@@ -91,6 +91,9 @@ def main():
         selected0 = option_menu(None, ["လုပ်ဆောင်ချက်", "ကင်မရာ", "ရလဒ်"], orientation="horizontal")
         if selected0 == "လုပ်ဆောင်ချက်":
             demo()
+        
+        if seleted0 = "ရလဒ်":
+            st.image("img.jpeg")
 
 
 
