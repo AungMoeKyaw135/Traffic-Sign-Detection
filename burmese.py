@@ -49,7 +49,7 @@ def demo():
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded file', use_column_width=True)
-        st.write("ခန့်မှန်းချက်"/n/n/n)
+        st.write("ခန့်မှန်းချက်")
 #         st.sub("")
         class_names = ['ဦးစာပေးစေ၍ ဖြည်းဖြည်းမောင်းပါ', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'လှည့်သွားပါ', 'ရပ်']
         Ans = teachable_machine_classification(image, 'Final.h5')
