@@ -89,13 +89,15 @@ def main():
                             menu_icon="cast", default_index=0, orientation="horizontal")
 
     if selected == "Demo":
-        selected0 = option_menu(None, ["Demonstration", "Computer Vision", " Evaluation Metric", ],
+        selected0 = option_menu(None, ["Demonstration", "Computer Vision", "Evaluation Metric", ],
                             icons=['activity', 'eye-fill', "check2-circle"],
                             menu_icon="cast", default_index=0, orientation="horizontal")
+        
     if selected0 == "Demonstration":
         
         demo()
-
+    if selected0 == "Evaluation Metric":
+        st.image("img.jpg")
 
 
 main()
