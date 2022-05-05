@@ -93,7 +93,7 @@ def main():
             demo()
         
         if selected0 == "ရလဒ်":
-            st.image("img.jpeg")
+            st.image("img.jpg")
 
 
 
