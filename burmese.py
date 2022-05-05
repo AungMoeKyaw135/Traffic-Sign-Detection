@@ -54,7 +54,7 @@ def demo():
         class_names = ['ဦးစာပေးစေ၍ ဖြည်းဖြည်းမောင်းပါ', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'လှည့်သွားပါ', 'ရပ်']
         Ans = teachable_machine_classification(image, 'Final.h5')
         string = class_names[np.argmax(Ans)]
-        string = st.header(string)
+#         string = st.header(string)
         st.write('ပုံ၏ အဓိပ္ပာယ်မှာ - ', string)
         # df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
         # st.write(df)
