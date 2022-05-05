@@ -51,7 +51,7 @@ def demo():
         st.image(image, caption='Uploaded file', use_column_width=True)
         st.write("")
         st.write("ခန့်မှန်းမည့်ပုံမှာ အောက်ပါပုံဖြစ်သည်")
-        class_names = ['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop']
+        class_names = ['Giveway', 'မဖြတ်သန်းရ', 'ဟွန်းမတီးရ', 'Roundabout', 'ရပ်']
         Ans = teachable_machine_classification(image, 'Final.h5')
         string = class_names[np.argmax(Ans)]
         st.write('ခန့်မှန်းမည့်ပုံမှာ - ', string)
