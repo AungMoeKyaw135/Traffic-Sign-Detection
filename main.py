@@ -22,10 +22,10 @@ def teachable_machine_classification(img, weights_file):
     model = keras.models.load_model(weights_file)
 
     # Create the array of the right shape to feed into the keras model
-    data = np.ndarray(shape=(1, 150, 150, 3), dtype=np.float32)
+    data = np.ndarray(shape=(1, 200, 200, 3), dtype=np.float32)
     image = img
     # image sizing
-    size = (150, 150)
+    size = (200, 200)
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
     # turn the image into a numpy array
