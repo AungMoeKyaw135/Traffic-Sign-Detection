@@ -54,7 +54,7 @@ def demo():
         st.write("")
         st.write("Classifying...")
         class_names = ['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop']
-        Ans = teachable_machine_classification(image, 'Final.h5')
+        Ans = teachable_machine_classification(image, 'Inception_DA.h5')
         string=class_names[np.argmax(Ans)]
         st.header(string)
         #df = pd.DataFrame(label, columns=['Giveway', 'NoEntry', 'NoHorn', 'Roundabout', 'Stop'])
