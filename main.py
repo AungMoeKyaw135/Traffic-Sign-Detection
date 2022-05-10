@@ -98,7 +98,7 @@ def main():
         st.write("...More....")
         
     if selected1 == "Developer contact":
-        st.write("aungmoekyaw1352001@gmail.com")
+        st.write("noname@gmail.com")
         st.write(".....More.....")
         
     if selected == "Demo":
