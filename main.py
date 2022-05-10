@@ -97,6 +97,10 @@ def main():
         st.write("By using our model, we assume you read all the terms and conditions and are aware of the weakness, such as having a large rain camera isn't clear to detect. It's intuitively clear to acknowledge that our models are unable to let it alone without any humanoid supervisor.")
         st.write("...More....")
         
+    if selected1 == "Developer contact":
+        st.write("aungmoekyaw1352001@gmail.com")
+        st.write(".....More.....")
+        
     if selected == "Demo":
         selected0 = option_menu(None, ["Demonstration", "Evaluation Metric", ],
                             icons=['activity', "check2-circle"],
