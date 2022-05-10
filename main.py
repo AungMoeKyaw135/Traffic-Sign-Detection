@@ -110,7 +110,7 @@ def main():
         
         demo()
     if selected0 == "Evaluation Metric":
-        st.image("img.jpg")
+        st.image("img.png")
 
 
 main()
