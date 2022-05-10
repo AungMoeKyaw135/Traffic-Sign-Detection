@@ -90,7 +90,13 @@ def main():
 
     if selected1 == "Term and con":
         st.header("Term and Condition")
-
+        st.write("Please read the terms and cons before using our model")
+        st.write("")
+        st.write("Although we consider unexpected circumstances, there are some weaknesses that we can't control such as the camera error, and camera view-blocking by trash on the road. We do committed to evolving development.")
+        st.write("")
+        st.write("By using our model, we assume you read all the terms and conditions and are aware of the weakness, such as having a large rain camera isn't clear to detect. It's intuitively clear to acknowledge that our models are unable to let it alone without any humanoid supervisor.")
+        st.write("...More....")
+        
     if selected == "Demo":
         selected0 = option_menu(None, ["Demonstration", "Evaluation Metric", ],
                             icons=['activity', "check2-circle"],
