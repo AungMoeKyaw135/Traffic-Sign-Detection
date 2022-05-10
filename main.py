@@ -88,6 +88,9 @@ def main():
                             icons=['clipboard', 'chat-right-dots'],
                             menu_icon="cast", default_index=0, orientation="horizontal")
 
+    if selected1 == "Term and con":
+        st.header("Term and Condition")
+
     if selected == "Demo":
         selected0 = option_menu(None, ["Demonstration", "Evaluation Metric", ],
                             icons=['activity', "check2-circle"],
