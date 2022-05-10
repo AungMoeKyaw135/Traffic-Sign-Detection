@@ -86,6 +86,18 @@ def main():
     if selected == "အကြောင်းအရာ":
         selected1 = option_menu(None, ["စာချုပ်", "တီထွင်သူများသို့ ဆက်သွယ်ခြင်း"], icons=['clipboard', 'chat-right-dots'],
                             menu_icon="cast", default_index=0,orientation="horizontal")
+        if selected1 == "စာချုပ်":
+            st.header("Term and Condition")
+            st.write("Please read the terms and cons before using our model")
+            st.write("")
+            st.write("Although we consider unexpected circumstances, there are some weaknesses that we can't control such as the camera error, and camera view-blocking by trash on the road. We do committed to evolving development.")
+            st.write("")
+            st.write("By using our model, we assume you read all the terms and conditions and are aware of the weakness, such as having a large rain camera isn't clear to detect. It's intuitively clear to acknowledge that our models are unable to let it alone without any humanoid supervisor.")
+            st.write("...More....")
+        
+        if selected1 == "တီထွင်သူများသို့ ဆက်သွယ်ခြင်း":
+            st.write("noname@gmail.com")
+            st.write(".....More.....")
 
     if selected == "လုပ်ဆောင်ချက်":
     
@@ -97,7 +109,7 @@ def main():
             demo()
         
         if selected0 == "ရလဒ်":
-            st.image("img.jpg")
+            st.image("img.png")
 
 
 
