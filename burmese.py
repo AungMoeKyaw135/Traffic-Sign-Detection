@@ -96,7 +96,8 @@ def main():
             st.write("...More....")
         
         if selected1 == "တီထွင်သူများသို့ ဆက်သွယ်ခြင်း":
-            st.write("noname@gmail.com")
+            st.write("Machine Learning / AI engineers : Zin Wai Yan, Chan Myae Oo, Aung Moe Kyaw")
+            st.write("zinwaiyan274@gmail.com")
             st.write(".....More.....")
 
     if selected == "လုပ်ဆောင်ချက်":
