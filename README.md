@@ -7,4 +7,4 @@ In above link we consider people who struggle with English. So we added the Burm
 >>>Please check presenation slide for algorithm detail, evaluation matric, AI ethic and more about algorithm.  
 https://drive.google.com/drive/folders/1rfutYWzJB8gJyu2RfjsTYWs1dR-NEbEV?usp=sharing
 
-#For more info > zinwaiyan274@gmail.com
+# For more info > zinwaiyan274@gmail.com
